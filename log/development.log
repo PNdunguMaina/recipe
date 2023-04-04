@@ -95,3 +95,10 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 254)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-04 18:04:12 +0300
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/maina/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/maina/.rbenv/versions/3.1.0/lib/ruby/gems/3.1.0/gems/railties-7.0.4.3/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.0ms | Allocations: 529)
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3759)
+
+
