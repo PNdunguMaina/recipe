@@ -213,10 +213,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
-<<<<<<< HEAD
   dotenv (~> 2.8)
-=======
->>>>>>> 98e637b (Create new rails application using 'rails new' command)
   importmap-rails
   jbuilder
   pg (~> 1.1)
