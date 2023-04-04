@@ -102,3 +102,71 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 3759)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-04 18:34:35 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.3ms | Allocations: 130)
+  Rendered layout layouts/application.html.erb (Duration: 186.9ms | Allocations: 84132)
+Completed 500 Internal Server Error in 188ms (Allocations: 85171)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000dea8>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+    11:     <%= csp_meta_tag %>
+    12: 
+    13:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    14:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    15:   </head>
+    16:   <body>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-04-04 18:34:36 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 14.0ms | Allocations: 5731)
+Completed 500 Internal Server Error in 15ms (Allocations: 6017)
+
+
+  
+ActionView::Template::Error (undefined method `javascript_pack_tag' for #<ActionView::Base:0x0000000000e218>
+
+    '.freeze;@output_buffer.append=( javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' );@output_buffer.safe_append='
+                                     ^^^^^^^^^^^^^^^^^^^
+Did you mean?  javascript_path
+               javascript_tag):
+    11:     <%= csp_meta_tag %>
+    12: 
+    13:     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    14:     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    15:   </head>
+    16:   <body>
+    17:     <%= yield %>
+  
+app/views/layouts/application.html.erb:14
+Started GET "/" for 127.0.0.1 at 2023-04-04 18:35:04 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 11.6ms | Allocations: 14438)
+Completed 200 OK in 14ms (Views: 12.9ms | Allocations: 15282)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-04 18:35:53 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 7.5ms | Allocations: 3054)
+Completed 200 OK in 10ms (Views: 9.5ms | Allocations: 3903)
+
+
