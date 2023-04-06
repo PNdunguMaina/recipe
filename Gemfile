@@ -76,3 +76,5 @@ group :test do
 end
 
 gem 'dotenv', '~> 2.8'
+
+gem "devise", "~> 4.9"

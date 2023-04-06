@@ -170,3 +170,87 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 10ms (Views: 9.5ms | Allocations: 3903)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-06 17:34:42 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.8ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 172.7ms | Allocations: 92417)
+Completed 200 OK in 179ms (Views: 174.9ms | ActiveRecord: 0.0ms | Allocations: 95830)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-06 17:38:03 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.6ms | Allocations: 342)
+  Rendered layout layouts/application.html.erb (Duration: 40.5ms | Allocations: 35157)
+Completed 200 OK in 46ms (Views: 42.1ms | ActiveRecord: 0.0ms | Allocations: 38570)
+
+
+  [1m[35m (636.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (107.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(693931032017452950)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20230406145053)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (68.7ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (46.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (147.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230406145053"]]
+  [1m[36mTRANSACTION (33.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-04-06 14:51:55.488627"], ["updated_at", "2023-04-06 14:51:55.488627"]]
+  [1m[36mTRANSACTION (50.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(693931032017452950)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-06 17:52:49 +0300
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007f3a0f81ab78 @set=#<ActionDispatch::Routing::RouteSet:0x00007f3a1003b398>, @draw_paths=[#<Pathname:/home/maina/Desktop/recip2/recipe/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f3a0f81ab28 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f3a0ff764a8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-06 17:53:16 +0300
+  
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x00007f3a0f81b848 @set=#<ActionDispatch::Routing::RouteSet:0x00007f3a1003b398>, @draw_paths=[#<Pathname:/home/maina/Desktop/recip2/recipe/config/routes>], @scope=#<ActionDispatch::Routing::Mapper::Scope:0x00007f3a0f81b7f8 @hash={:path_names=>{:new=>"new", :edit=>"edit"}}, @parent=#<ActionDispatch::Routing::Mapper::Scope:0x00007f3a0ff764a8 @hash=nil, @parent=nil, @scope_level=nil>, @scope_level=nil>, @concerns={}>
+
+  devise_for :users
+  ^^^^^^^^^^):
+  
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-06 17:54:57 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.5ms | Allocations: 737)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 61.7ms | Allocations: 8158)
+  Rendered layout layouts/application.html.erb (Duration: 96.0ms | Allocations: 43266)
+Completed 200 OK in 119ms (Views: 100.8ms | ActiveRecord: 2.3ms | Allocations: 53970)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-06 17:55:02 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 218)
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2203)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4616)
+Completed 200 OK in 12ms (Views: 9.5ms | ActiveRecord: 0.0ms | Allocations: 5895)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-06 17:55:09 +0300
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.7ms | Allocations: 128)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 2809)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 3676)
+
+
