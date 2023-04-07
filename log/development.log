@@ -459,3 +459,497 @@ Processing by RecipsController#index as HTML
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 3369)
 
 
+Started GET "/recips" for 127.0.0.1 at 2023-04-07 10:55:43 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recips/index.html.erb within layouts/application
+  [1m[36mRecip Load (0.7ms)[0m  [1m[34mSELECT "recips".* FROM "recips"[0m
+  ↳ app/views/recips/index.html.erb:6
+  Rendered recips/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1856)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 36855)
+Completed 200 OK in 62ms (Views: 36.4ms | ActiveRecord: 0.7ms | Allocations: 42981)
+
+
+Started GET "/recips" for 127.0.0.1 at 2023-04-07 10:57:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RecipsController#index as HTML
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.0ms | Allocations: 2726)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-07 10:57:14 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 737)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3952)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 38977)
+Completed 200 OK in 56ms (Views: 36.4ms | ActiveRecord: 5.2ms | Allocations: 48097)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:00:18 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 729)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.8ms | Allocations: 5024)
+  Rendered layout layouts/application.html.erb (Duration: 13.6ms | Allocations: 18998)
+Completed 200 OK in 24ms (Views: 14.8ms | ActiveRecord: 2.4ms | Allocations: 26978)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-07 11:00:24 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.0ms | Allocations: 218)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 152)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2539)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4941)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.0ms | Allocations: 6309)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:00:34 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 131)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1226)
+  Rendered layout layouts/application.html.erb (Duration: 7.1ms | Allocations: 3427)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 4160)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-07 11:00:36 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 78)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 1433)
+  Rendered layout layouts/application.html.erb (Duration: 7.7ms | Allocations: 3633)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 4195)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-04-07 11:01:09 +0300
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 218)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 549)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2989)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 5605)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.0ms | Allocations: 7224)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (51.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "johndoe@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-04-07 08:06:38.996677"], ["updated_at", "2023-04-07 08:06:38.996677"], ["name", "John Doe"]]
+  [1m[36mTRANSACTION (27.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sammylike@example.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["email", "sammylike@example.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2023-04-07 08:06:39.296772"], ["updated_at", "2023-04-07 08:06:39.296772"], ["name", "Sammy Luke"]]
+  [1m[36mTRANSACTION (15.2ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:06:51 +0300
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 726)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.0ms | Allocations: 3875)
+  Rendered layout layouts/application.html.erb (Duration: 22.8ms | Allocations: 17870)
+Completed 200 OK in 37ms (Views: 24.0ms | ActiveRecord: 4.5ms | Allocations: 27283)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:07:23 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/foods
+Completed 303 See Other in 223ms (ActiveRecord: 3.5ms | Allocations: 9163)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:07:23 +0300
+Processing by FoodsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1104)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3534)
+Completed 200 OK in 9ms (Views: 3.9ms | ActiveRecord: 0.5ms | Allocations: 7696)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sammylike@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:11:26 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1092)
+  Rendered layout layouts/application.html.erb (Duration: 9.6ms | Allocations: 15152)
+Completed 200 OK in 30ms (Views: 10.2ms | ActiveRecord: 5.5ms | Allocations: 29135)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:11:28 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 610)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 2808)
+Completed 200 OK in 11ms (Views: 6.8ms | ActiveRecord: 0.6ms | Allocations: 4529)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2023-04-07 11:11:35 +0300
+Processing by FoodsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/_form.html.erb (Duration: 1.0ms | Allocations: 749)
+  Rendered foods/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1034)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 3242)
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 2.1ms | Allocations: 8429)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:11:37 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 610)
+  Rendered layout layouts/application.html.erb (Duration: 10.5ms | Allocations: 2808)
+Completed 200 OK in 17ms (Views: 10.7ms | ActiveRecord: 0.6ms | Allocations: 4390)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sammylike@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/foods/new" for 127.0.0.1 at 2023-04-07 11:39:10 +0300
+Processing by FoodsController#new as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/_form.html.erb (Duration: 0.6ms | Allocations: 375)
+  Rendered foods/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 462)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 2680)
+Completed 200 OK in 50ms (Views: 30.5ms | ActiveRecord: 2.6ms | Allocations: 7172)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2023-04-07 11:39:11 +0300
+Processing by FoodsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/_form.html.erb (Duration: 0.9ms | Allocations: 375)
+  Rendered foods/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 462)
+  Rendered layout layouts/application.html.erb (Duration: 3.7ms | Allocations: 2670)
+Completed 200 OK in 7ms (Views: 4.2ms | ActiveRecord: 0.3ms | Allocations: 4249)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:39:12 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.5ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.5ms | Allocations: 631)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 2829)
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.8ms | Allocations: 4417)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-07 11:39:39 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 35493)
+Completed 200 OK in 55ms (Views: 34.8ms | ActiveRecord: 3.0ms | Allocations: 49220)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-07 11:43:04 +0300
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 533)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3162)
+Completed 200 OK in 9ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 5600)
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2023-04-07 11:43:07 +0300
+Processing by Devise::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 36ms (ActiveRecord: 0.3ms | Allocations: 4762)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-07 11:43:07 +0300
+Processing by HomeController#index as TURBO_STREAM
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 427)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:43:07 +0300
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 732)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 3667)
+  Rendered layout layouts/application.html.erb (Duration: 8.2ms | Allocations: 6072)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.0ms | Allocations: 7480)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mFood Create (30.8ms)[0m  [1m[32mINSERT INTO "foods" ("name", "measurement_unit", "price", "quantity", "created_at", "updated_at", "author_id") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "Chicken Wings"], ["measurement_unit", "Units"], ["price", 2], ["quantity", "4 units"], ["created_at", "2023-04-07 08:43:29.749694"], ["updated_at", "2023-04-07 08:43:29.749694"], ["author_id", nil]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:44:16 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 221ms (ActiveRecord: 2.3ms | Allocations: 12086)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 737)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 5.4ms | Allocations: 4240)
+  Rendered layout layouts/application.html.erb (Duration: 33.2ms | Allocations: 39229)
+Completed 200 OK in 240ms (Views: 36.4ms | ActiveRecord: 0.0ms | Allocations: 41994)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-04-07 11:44:30 +0300
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"johndoe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/foods
+Completed 303 See Other in 210ms (ActiveRecord: 0.3ms | Allocations: 3753)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:44:30 +0300
+Processing by FoodsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1105)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3749)
+Completed 200 OK in 9ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 8043)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:44:33 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 610)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 2809)
+Completed 200 OK in 12ms (Views: 5.7ms | ActiveRecord: 0.7ms | Allocations: 4556)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:44:35 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 610)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 2809)
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.8ms | Allocations: 4399)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:45:45 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.4ms | Allocations: 992)
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3609)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.5ms | Allocations: 5783)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:45:46 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.7ms | Allocations: 610)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 2808)
+Completed 200 OK in 9ms (Views: 4.6ms | ActiveRecord: 0.7ms | Allocations: 4525)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:46:14 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1420)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 36533)
+Completed 200 OK in 50ms (Views: 30.7ms | ActiveRecord: 2.9ms | Allocations: 51958)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:46:14 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 650)
+  Rendered layout layouts/application.html.erb (Duration: 5.3ms | Allocations: 2969)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.8ms | Allocations: 4790)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:46:29 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1546)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 1645)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.3ms | Allocations: 3858)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <p style="color: green"><%= notice %></p>
+
+<h1>Foods</h1>
+
+<div id="foods">
+  <% @foods.each do |food| %>
+    <%= render food :name %>
+    <p>
+      <%= link_to "Show this food", food %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New food", new_food_path %>
+
+):
+1:    <p style="color: green"><%= notice %></p>
+2:    
+3:    <h1>Foods</h1>
+4:    
+5:    <div id="foods">
+6:      <% @foods.each do |food| %>
+7:        <%= render food :name %>
+8:        <p>
+9:          <%= link_to "Show this food", food %>
+10:        </p>
+11:      <% end %>
+12:    </div>
+13:    
+14:    <%= link_to "New food", new_food_path %>
+  
+app/views/foods/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+app/views/foods/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+app/views/foods/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+app/views/foods/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+app/views/foods/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+app/views/foods/index.html.erb:7: syntax error, unexpected ':', expecting ')'
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:47:05 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.3ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.7ms | Allocations: 992)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3625)
+Completed 200 OK in 13ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 6025)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:47:06 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.2ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 610)
+  Rendered layout layouts/application.html.erb (Duration: 3.9ms | Allocations: 2808)
+Completed 200 OK in 7ms (Views: 4.1ms | ActiveRecord: 0.4ms | Allocations: 4531)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:47:37 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1418)
+  Rendered layout layouts/application.html.erb (Duration: 29.3ms | Allocations: 36405)
+Completed 200 OK in 52ms (Views: 30.6ms | ActiveRecord: 2.8ms | Allocations: 51785)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 11:47:38 +0300
+Processing by FoodsController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.1ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 650)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 2969)
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.4ms | Allocations: 4820)
+
+
+  [1m[36mFood Load (0.8ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mFood Load (0.6ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "johndoe@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sammylike@example.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
