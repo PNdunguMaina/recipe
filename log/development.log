@@ -344,3 +344,118 @@ Processing by HomeController#index as HTML
 Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 0.0ms | Allocations: 39313)
 
 
+Started GET "/" for 127.0.0.1 at 2023-04-07 00:21:34 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 0.5ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 147.7ms | Allocations: 35786)
+Completed 200 OK in 152ms (Views: 149.3ms | ActiveRecord: 0.0ms | Allocations: 39221)
+
+
+Started GET "/" for 127.0.0.1 at 2023-04-07 10:30:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (147.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomeController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 340)
+  Rendered layout layouts/application.html.erb (Duration: 1163.4ms | Allocations: 35854)
+Completed 200 OK in 1237ms (Views: 1174.1ms | ActiveRecord: 0.0ms | Allocations: 39298)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 10:35:12 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (103.7ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 110.1ms | Allocations: 1831)
+  Rendered layout layouts/application.html.erb (Duration: 149.2ms | Allocations: 36839)
+Completed 200 OK in 207ms (Views: 49.2ms | ActiveRecord: 103.7ms | Allocations: 42385)
+
+
+Started GET "/foods/new" for 127.0.0.1 at 2023-04-07 10:35:26 +0300
+Processing by FoodsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/_form.html.erb (Duration: 72.4ms | Allocations: 2182)
+  Rendered foods/new.html.erb within layouts/application (Duration: 73.8ms | Allocations: 2521)
+  Rendered layout layouts/application.html.erb (Duration: 78.1ms | Allocations: 4856)
+Completed 200 OK in 219ms (Views: 78.8ms | ActiveRecord: 113.8ms | Allocations: 10612)
+
+
+Started POST "/foods" for 127.0.0.1 at 2023-04-07 10:35:31 +0300
+Processing by FoodsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Food"}
+  Rendering layout layouts/application.html.erb
+  Rendering foods/new.html.erb within layouts/application
+  Rendered foods/_form.html.erb (Duration: 3.3ms | Allocations: 2712)
+  Rendered foods/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2813)
+  Rendered layout layouts/application.html.erb (Duration: 5.6ms | Allocations: 5140)
+Completed 422 Unprocessable Entity in 25ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 9202)
+
+
+Started GET "/foods" for 127.0.0.1 at 2023-04-07 10:35:47 +0300
+Processing by FoodsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering foods/index.html.erb within layouts/application
+  [1m[36mFood Load (0.4ms)[0m  [1m[34mSELECT "foods".* FROM "foods"[0m
+  ↳ app/views/foods/index.html.erb:6
+  Rendered foods/index.html.erb within layouts/application (Duration: 3.1ms | Allocations: 878)
+  Rendered layout layouts/application.html.erb (Duration: 6.5ms | Allocations: 3078)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.4ms | Allocations: 3373)
+
+
+Started GET "/recipe" for 127.0.0.1 at 2023-04-07 10:36:41 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/recipe"):
+  
+Started GET "/recip" for 127.0.0.1 at 2023-04-07 10:36:48 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/recip"):
+  
+Started GET "/recips" for 127.0.0.1 at 2023-04-07 10:36:57 +0300
+Processing by RecipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recips/index.html.erb within layouts/application
+  [1m[36mRecip Load (31.6ms)[0m  [1m[34mSELECT "recips".* FROM "recips"[0m
+  ↳ app/views/recips/index.html.erb:6
+  Rendered recips/index.html.erb within layouts/application (Duration: 44.5ms | Allocations: 4330)
+  Rendered layout layouts/application.html.erb (Duration: 58.8ms | Allocations: 18436)
+Completed 200 OK in 99ms (Views: 61.3ms | ActiveRecord: 35.6ms | Allocations: 21287)
+
+
+Started GET "/recips/new" for 127.0.0.1 at 2023-04-07 10:37:13 +0300
+Processing by RecipsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recips/new.html.erb within layouts/application
+  Rendered recips/_form.html.erb (Duration: 2.7ms | Allocations: 2147)
+  Rendered recips/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2467)
+  Rendered layout layouts/application.html.erb (Duration: 5.5ms | Allocations: 4804)
+Completed 200 OK in 30ms (Views: 6.0ms | ActiveRecord: 7.1ms | Allocations: 13034)
+
+
+Started POST "/recips" for 127.0.0.1 at 2023-04-07 10:37:15 +0300
+Processing by RecipsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "commit"=>"Create Recip"}
+  Rendering layout layouts/application.html.erb
+  Rendering recips/new.html.erb within layouts/application
+  Rendered recips/_form.html.erb (Duration: 4.3ms | Allocations: 2976)
+  Rendered recips/new.html.erb within layouts/application (Duration: 4.6ms | Allocations: 3077)
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 5404)
+Completed 422 Unprocessable Entity in 13ms (Views: 7.9ms | ActiveRecord: 0.0ms | Allocations: 8220)
+
+
+Started GET "/recips" for 127.0.0.1 at 2023-04-07 10:37:25 +0300
+Processing by RecipsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering recips/index.html.erb within layouts/application
+  [1m[36mRecip Load (0.3ms)[0m  [1m[34mSELECT "recips".* FROM "recips"[0m
+  ↳ app/views/recips/index.html.erb:6
+  Rendered recips/index.html.erb within layouts/application (Duration: 2.8ms | Allocations: 885)
+  Rendered layout layouts/application.html.erb (Duration: 6.6ms | Allocations: 3084)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms | Allocations: 3369)
+
+

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @recip %>
+
+<div>
+  <%= link_to "Edit this recip", edit_recip_path(@recip) %> |
+  <%= link_to "Back to recips", recips_path %>
+
+  <%= button_to "Destroy this recip", @recip, method: :delete %>
+</div>
