@@ -12,6 +12,23 @@
   <% end %>
 
   <div>
+    <%= form.label :Name %>
+    <%= form.text_area :name %>
+  </div>
+  <div>
+    <%= form.label :Measurement_unit %>
+    <%= form.text_area :measurement_unit %>
+  </div>
+  <div>
+    <%= form.label :Price %>
+    <%= form.number_field :price %>
+  </div>
+  <div>
+    <%= form.label :Quantity %>
+    <%= form.text_area :quantity %>
+  </div>
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>
