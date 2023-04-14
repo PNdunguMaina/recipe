@@ -1,7 +1,8 @@
 class Food < ApplicationRecord
     # Associations
     belongs_to :author, class_name: 'User'
-    has_many :recipe_foods, dependent: :destroy, foreign_key: true
+    has_many :recipe_foods, dependent: :destroy
+    has_many :recips, through: :recipe_foods, dependent: :destroy
 
     # Validations
     validates :name, presence: true
