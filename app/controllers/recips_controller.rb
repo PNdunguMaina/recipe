@@ -3,11 +3,13 @@ class RecipsController < ApplicationController
 
   # GET /recips or /recips.json
   def index
-    @recips = Recip.all
+    @recips = current_user.recips.all
   end
 
   # GET /recips/1 or /recips/1.json
   def show
+    # Retrieve the associated foods for the Recipe from the RecipeFood join table
+    @foods = Food.joins(:recipe_foods).where(recipe_foods: { recip_id: @recip.id }).select("foods.*, recipe_foods.quantity AS quantity").order(created_at: :desc)
   end
 
   # GET /recips/new
@@ -21,7 +23,7 @@ class RecipsController < ApplicationController
 
   # POST /recips or /recips.json
   def create
-    @recip = Recip.new(recip_params)
+    @recip = Recip.new(recipe_params)
 
     respond_to do |format|
       if @recip.save
@@ -64,7 +66,7 @@ class RecipsController < ApplicationController
     end
 
     # Only allow a list of trusted parameters through.
-    def recip_params
-      params.fetch(:recip, {})
-    end
+    # def recip_params
+    #   params.require(:recipe).permit(:name, food_ids: [])
+    # end
 end
