@@ -11,6 +11,19 @@
     </div>
   <% end %>
 
+  <!-- Render food selection checkboxes -->
+  <h2>Foods</h2>
+  <% @foods.each do |food| %>
+  <div class="food-entry">
+    <label class="food-label">
+      <%= form.check_box :food_ids, { multiple: true }, food.id, nil %>
+      <%= food.name %>
+    </label>
+    <%= form.label "recipe[quantities][#{food.id}]", "Quantity" %>
+    <%= form.text_field "recipe[quantities][#{food.id}]", placeholder: "Enter quantity here", min: 1 %>
+    
+  <% end %>
+</div>
   <div>
     <%= form.submit %>
   </div>

@@ -1,14 +1,15 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Recips</h1>
+<h1>Recipes</h1>
 
 <div id="recips">
-  <% @recips.each do |recip| %>
-    <%= render recip %>
-    <p>
-      <%= link_to "Show this recip", recip %>
-    </p>
+  <% @recips.each_with_index do |recip, index| %>
+  <hr />
+  <%= link_to recip, class:"text-decoration-none" do%>
+    <p>Recipe <%= index + 1%></p>
+    <p><%=recip.description%></p>
+    <% end %>
+    <%= link_to "Remove", recip, data: { turbo_method: :delete } %>
+    <hr />
   <% end %>
 </div>
-
-<%= link_to "New recip", new_recip_path %>

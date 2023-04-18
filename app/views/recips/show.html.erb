@@ -1,10 +1,28 @@
 <p style="color: green"><%= notice %></p>
-
-<%= render @recip %>
-
+<%= link_to "Back to recips", recips_path %>
+<p>Recipe <%= @recip.id %></p>
+<p><strong>Preparation Time:</strong> <%= @recip.preparation_time%>
+<p><strong>Cooking Time:</strong> <%= @recip.cooking_time%>
+<p>Steps go here...</p>
+<%if @recip.public == false%>
+  <label>Public</label>
+  <label class="switch">
+  <input type="checkbox" disabled>
+  <span class="slider round"></span>
+</label>
+<%else%>
+  <label>Public</label>
+  <label class="switch">
+  <input type="checkbox" checked disabled>
+  <span class="slider round"></span>
+</label>
+<%end%>
+<%= link_to "Generate Shopping List", recips_path, class:"btn btn-success" %>
+<%= link_to "Add ingredient", new_recip_recipe_food_path(@recip), class:"btn btn-primary" %>
 <div>
-  <%= link_to "Edit this recip", edit_recip_path(@recip) %> |
-  <%= link_to "Back to recips", recips_path %>
-
-  <%= button_to "Destroy this recip", @recip, method: :delete %>
+<% @foods.each do |food| %>
+    <hr />
+    <%= render partial: "shared/food", locals: { name: food.name, measurement_unit: nil, quantity: food.quantity, price: nil, value: food.quantity.to_i * food.price } %>
+  <% end %>
+  
 </div>
