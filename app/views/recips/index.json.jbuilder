@@ -1,1 +1,1 @@
-json.array! @recips, partial: "recips/recip", as: :recip
+json.array! @recips, partial: 'recips/recip', as: :recip

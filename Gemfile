@@ -77,4 +77,4 @@ end
 
 gem 'dotenv', '~> 2.8'
 
-gem "devise", "~> 4.9"
+gem 'devise', '~> 4.9'

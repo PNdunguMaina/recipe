@@ -11,6 +11,6 @@ class User < ApplicationRecord
   # Validations
   validates :name, presence: true, length: { maximum: 50 }
   validates :email, presence: true, length: { maximum: 255 }
-  validates :password, presence: true, length: { minimum: 8 }, format: { with: /\A(?=.*[a-zA-Z])(?=.*\d)(?=.*[@])[A-Za-z\d@]{8,}\z/, message: "Must include at least one letter, one number, and one special character" }
-
+  validates :password, presence: true, length: { minimum: 8 },
+                       format: { with: /\A(?=.*[a-zA-Z])(?=.*\d)(?=.*@)[A-Za-z\d@]{8,}\z/, message: 'Must include at least one letter, one number, and one special character' }
 end

@@ -12,94 +12,91 @@ require 'rails_helper'
 # of tools you can use to make these specs even more expressive, but we're
 # sticking to rails and rspec-rails APIs to keep things simple and stable.
 
-RSpec.describe "/recips", type: :request do
-  
+RSpec.describe '/recips', type: :request do
   # This should return the minimal set of attributes required to create a valid
   # Recip. As you add validations to Recip, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) {
-    skip("Add a hash of attributes valid for your model")
-  }
+  let(:valid_attributes) do
+    skip('Add a hash of attributes valid for your model')
+  end
 
-  let(:invalid_attributes) {
-    skip("Add a hash of attributes invalid for your model")
-  }
+  let(:invalid_attributes) do
+    skip('Add a hash of attributes invalid for your model')
+  end
 
-  describe "GET /index" do
-    it "renders a successful response" do
+  describe 'GET /index' do
+    it 'renders a successful response' do
       Recip.create! valid_attributes
       get recips_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /show" do
-    it "renders a successful response" do
+  describe 'GET /show' do
+    it 'renders a successful response' do
       recip = Recip.create! valid_attributes
       get recip_url(recip)
       expect(response).to be_successful
     end
   end
 
-  describe "GET /new" do
-    it "renders a successful response" do
+  describe 'GET /new' do
+    it 'renders a successful response' do
       get new_recip_url
       expect(response).to be_successful
     end
   end
 
-  describe "GET /edit" do
-    it "renders a successful response" do
+  describe 'GET /edit' do
+    it 'renders a successful response' do
       recip = Recip.create! valid_attributes
       get edit_recip_url(recip)
       expect(response).to be_successful
     end
   end
 
-  describe "POST /create" do
-    context "with valid parameters" do
-      it "creates a new Recip" do
-        expect {
+  describe 'POST /create' do
+    context 'with valid parameters' do
+      it 'creates a new Recip' do
+        expect do
           post recips_url, params: { recip: valid_attributes }
-        }.to change(Recip, :count).by(1)
+        end.to change(Recip, :count).by(1)
       end
 
-      it "redirects to the created recip" do
+      it 'redirects to the created recip' do
         post recips_url, params: { recip: valid_attributes }
         expect(response).to redirect_to(recip_url(Recip.last))
       end
     end
 
-    context "with invalid parameters" do
-      it "does not create a new Recip" do
-        expect {
+    context 'with invalid parameters' do
+      it 'does not create a new Recip' do
+        expect do
           post recips_url, params: { recip: invalid_attributes }
-        }.to change(Recip, :count).by(0)
+        end.to change(Recip, :count).by(0)
       end
 
-    
       it "renders a response with 422 status (i.e. to display the 'new' template)" do
         post recips_url, params: { recip: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
-  describe "PATCH /update" do
-    context "with valid parameters" do
-      let(:new_attributes) {
-        skip("Add a hash of attributes valid for your model")
-      }
+  describe 'PATCH /update' do
+    context 'with valid parameters' do
+      let(:new_attributes) do
+        skip('Add a hash of attributes valid for your model')
+      end
 
-      it "updates the requested recip" do
+      it 'updates the requested recip' do
         recip = Recip.create! valid_attributes
         patch recip_url(recip), params: { recip: new_attributes }
         recip.reload
-        skip("Add assertions for updated state")
+        skip('Add assertions for updated state')
       end
 
-      it "redirects to the recip" do
+      it 'redirects to the recip' do
         recip = Recip.create! valid_attributes
         patch recip_url(recip), params: { recip: new_attributes }
         recip.reload
@@ -107,26 +104,24 @@ RSpec.describe "/recips", type: :request do
       end
     end
 
-    context "with invalid parameters" do
-    
+    context 'with invalid parameters' do
       it "renders a response with 422 status (i.e. to display the 'edit' template)" do
         recip = Recip.create! valid_attributes
         patch recip_url(recip), params: { recip: invalid_attributes }
         expect(response).to have_http_status(:unprocessable_entity)
       end
-    
     end
   end
 
-  describe "DELETE /destroy" do
-    it "destroys the requested recip" do
+  describe 'DELETE /destroy' do
+    it 'destroys the requested recip' do
       recip = Recip.create! valid_attributes
-      expect {
+      expect do
         delete recip_url(recip)
-      }.to change(Recip, :count).by(-1)
+      end.to change(Recip, :count).by(-1)
     end
 
-    it "redirects to the recips list" do
+    it 'redirects to the recips list' do
       recip = Recip.create! valid_attributes
       delete recip_url(recip)
       expect(response).to redirect_to(recips_url)

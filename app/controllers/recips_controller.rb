@@ -1,5 +1,5 @@
 class RecipsController < ApplicationController
-  before_action :set_recip, only: %i[ show edit update destroy ]
+  before_action :set_recip, only: %i[show edit update destroy]
 
   # GET /recips or /recips.json
   def index
@@ -9,7 +9,7 @@ class RecipsController < ApplicationController
   # GET /recips/1 or /recips/1.json
   def show
     # Retrieve the associated foods for the Recipe from the RecipeFood join table
-    @foods = Food.joins(:recipe_foods).where(recipe_foods: { recip_id: @recip.id }).select("foods.*, recipe_foods.quantity AS quantity").order(created_at: :desc)
+    @foods = Food.joins(:recipe_foods).where(recipe_foods: { recip_id: @recip.id }).select('foods.*, recipe_foods.quantity AS quantity').order(created_at: :desc)
   end
 
   # GET /recips/new
@@ -18,8 +18,7 @@ class RecipsController < ApplicationController
   end
 
   # GET /recips/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /recips or /recips.json
   def create
@@ -27,7 +26,7 @@ class RecipsController < ApplicationController
 
     respond_to do |format|
       if @recip.save
-        format.html { redirect_to recip_url(@recip), notice: "Recip was successfully created." }
+        format.html { redirect_to recip_url(@recip), notice: 'Recip was successfully created.' }
         format.json { render :show, status: :created, location: @recip }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -40,7 +39,7 @@ class RecipsController < ApplicationController
   def update
     respond_to do |format|
       if @recip.update(recip_params)
-        format.html { redirect_to recip_url(@recip), notice: "Recip was successfully updated." }
+        format.html { redirect_to recip_url(@recip), notice: 'Recip was successfully updated.' }
         format.json { render :show, status: :ok, location: @recip }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -54,19 +53,20 @@ class RecipsController < ApplicationController
     @recip.destroy
 
     respond_to do |format|
-      format.html { redirect_to recips_url, notice: "Recip was successfully destroyed." }
+      format.html { redirect_to recips_url, notice: 'Recip was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_recip
-      @recip = Recip.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    # def recip_params
-    #   params.require(:recipe).permit(:name, food_ids: [])
-    # end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_recip
+    @recip = Recip.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  # def recip_params
+  #   params.require(:recipe).permit(:name, food_ids: [])
+  # end
 end

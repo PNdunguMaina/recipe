@@ -1,1 +1,1 @@
-json.partial! "recips/recip", recip: @recip
+json.partial! 'recips/recip', recip: @recip
