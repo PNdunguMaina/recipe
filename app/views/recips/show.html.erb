@@ -23,6 +23,6 @@
 <% @foods.each do |food| %>
     <hr />
     <%= render partial: "shared/food", locals: { name: food.name, measurement_unit: nil, quantity: food.quantity, price: nil, value: food.quantity.to_i * food.price } %>
+    <%= button_to "Delete", recip_recipe_food_path(@recip.id, food.id), method: :delete, class: "btn btn-danger" %>
   <% end %>
-  
 </div>

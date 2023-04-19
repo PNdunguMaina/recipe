@@ -58,6 +58,10 @@ class RecipsController < ApplicationController
     end
   end
 
+  def public_recipe
+    @recipes = Recip.all.where(public: true)
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
