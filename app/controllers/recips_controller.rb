@@ -62,6 +62,39 @@ class RecipsController < ApplicationController
     @recipes = Recip.all.where(public: true)
   end
 
+  def generate_shopping_list
+    # Get all recipes
+    @recipes = Recip.all
+
+    # Initialize an empty hash to store the food quantities needed
+    @shopping_list = {}
+
+    # Initialize a variable to store the total value of foods
+    @total_value = 0
+
+    # Iterate through each recipe
+    @recipes.each do |recipe|
+      # Iterate through the RecipeFoods associated with the recipe
+      recipe.recipe_foods.each do |recipe_food|
+        food = Food.find(recipe_food.food_id)
+        quantity = recipe_food.quantity.to_i
+
+        # Add the food and its quantity to the shopping list
+        if @shopping_list[food.name]
+          @shopping_list[food.name] += quantity
+
+        else
+          @shopping_list[food.name] = quantity
+        end
+        # Calculate the value of the food and add it to the total value
+        @total_value += food.price * quantity
+      end
+    end
+
+    # Get the number of foods needed in the shopping list
+    @total_foods = @shopping_list.count
+  end
+
   private
 
   # Use callbacks to share common setup or constraints between actions.
