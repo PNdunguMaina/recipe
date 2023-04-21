@@ -32,3 +32,6 @@
 
 # Ignore node module folder
 node_modules/
+
+# Ignore .env file
+/.env

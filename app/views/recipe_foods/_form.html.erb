@@ -1,0 +1,17 @@
+<%= form_with(model: @recipe_food, url: recip_recipe_foods_path(params[:recip_id]), method: :post, local: true) do |form| %>
+  <% if recipe_food.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recipe_food.errors.count, "error") %> prohibited this recipe_food from being saved:</h2>
+
+      <ul>
+        <% recipe_food.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= form.collection_select :food_id, @foods, :id, lambda { |food| "#{food.name} (#{food.measurement_unit})" }, prompt: "Select Food" %>
+  <%= form.label :quantity, "Quantity" %>
+  <%= form.text_field :quantity %>
+  <%= form.submit "Add Food to Recipe" %>
+<% end %>

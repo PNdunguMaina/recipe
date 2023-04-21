@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Foods</h1>
+<%= link_to "Add", new_food_path %>
+  <% @foods.each do |food| %>
+    <hr />
+    <%= render partial: "shared/food", locals: { name: food.name, measurement_unit: food.measurement_unit, quantity: nil, price: food.price, value: nil } %>
+    <span>Actions: </span><%= link_to "Delete", food, data: { turbo_method: :delete } %>
+    <hr />
+  <% end %>

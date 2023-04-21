@@ -1,0 +1,25 @@
+<div id="foods">
+  <p>
+    <strong>Food: </strong><%= name %>
+  </p>
+  <% unless measurement_unit.nil? %>
+  <p>
+    <strong>Measurement unit: </strong><%= measurement_unit %>
+  </p>
+  <% end %>
+  <% unless quantity.nil? %>
+  <p>
+    <strong>Quantity: </strong><%= quantity %>
+  </p>
+  <% end %>
+  <% unless price.nil? %>
+  <span>
+    <strong>Unit price: </strong>$<%= price %>
+  </span>
+  <% end %>
+  <% unless value.nil? %>
+   <span>
+    <strong>Value: </strong>$<%= value %>
+  </span>
+  <% end %>
+</div>

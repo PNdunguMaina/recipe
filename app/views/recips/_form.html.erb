@@ -1,0 +1,30 @@
+<%= form_with(model: recip) do |form| %>
+  <% if recip.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(recip.errors.count, "error") %> prohibited this recip from being saved:</h2>
+
+      <ul>
+        <% recip.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!-- Render food selection checkboxes -->
+  <h2>Foods</h2>
+  <% @foods.each do |food| %>
+  <div class="food-entry">
+    <label class="food-label">
+      <%= form.check_box :food_ids, { multiple: true }, food.id, nil %>
+      <%= food.name %>
+    </label>
+    <%= form.label "recipe[quantities][#{food.id}]", "Quantity" %>
+    <%= form.text_field "recipe[quantities][#{food.id}]", placeholder: "Enter quantity here", min: 1 %>
+    
+  <% end %>
+</div>
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

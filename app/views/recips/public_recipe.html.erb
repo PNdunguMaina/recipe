@@ -1,0 +1,9 @@
+<h1>Public Recipes</h1>
+<% @recipes.each do |recipe| %>
+    <hr />
+    <p><%= recipe.name %></p>
+    <p>By: <span><%= recipe.author.name.split(" ").second %></span></p>
+    <p>Total food items: <span><%= recipe.foods.count %></span></p>
+     <p>Total price: <span><%= number_to_currency(recipe.calculate_total_price(recipe)) %></span></p>
+    <hr />
+<% end %>
