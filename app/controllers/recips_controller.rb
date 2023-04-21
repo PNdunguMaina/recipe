@@ -17,12 +17,10 @@ class RecipsController < ApplicationController
     @recip = Recip.new
   end
 
-  # GET /recips/1/edit
-  def edit; end
-
   # POST /recips or /recips.json
   def create
     @recip = Recip.new(recipe_params)
+    @recip.author = current_user
 
     respond_to do |format|
       if @recip.save
@@ -30,19 +28,6 @@ class RecipsController < ApplicationController
         format.json { render :show, status: :created, location: @recip }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @recip.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /recips/1 or /recips/1.json
-  def update
-    respond_to do |format|
-      if @recip.update(recip_params)
-        format.html { redirect_to recip_url(@recip), notice: 'Recip was successfully updated.' }
-        format.json { render :show, status: :ok, location: @recip }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @recip.errors, status: :unprocessable_entity }
       end
     end
@@ -104,6 +89,6 @@ class RecipsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   # def recip_params
-  #   params.require(:recipe).permit(:name, food_ids: [])
+  #   params.require(:recip).permit(:name, :preparation_time, :cooking_time, :description, :public)
   # end
 end
