@@ -1,7 +1,30 @@
-/*
- *= require font-awesome
- */
+@import 'fontawesome';
 
+body {
+  background-color: #344e41 !important;
+}
+
+.navbar {
+  background-color: inherit;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+}
+
+.navbar-brand, .nav-link {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 0.8;
+}
+
+.nav-link:hover, .nav-link:focus {
+  opacity: 1;
+  border-bottom: 1px solid;
+}
+
+.navbar-toggler {
+background-color: #fff;
+}
 /* The switch - the box around the slider */
 .switch {
   position: relative;
@@ -64,3 +87,23 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+
+ /* Add custom CSS to prevent content push down in mobile view */
+  @media (max-width: 992px) {
+    .navbar {
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 1030;
+    }
+
+    .navbar-collapse {
+      min-height: 50vh;
+      background-color: inherit;
+    }
+    /* Add padding to body to account for navbar height */
+    body {
+      padding-top: 70px;
+    }
+  }
