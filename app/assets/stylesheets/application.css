@@ -9,7 +9,8 @@ body {
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.navbar-brand, .nav-link {
+.navbar-brand,
+.nav-link {
   color: #fff;
   font-size: 1.5rem;
   font-weight: 600;
@@ -17,13 +18,14 @@ body {
   opacity: 0.8;
 }
 
-.nav-link:hover, .nav-link:focus {
+.nav-link:hover,
+.nav-link:focus {
   opacity: 1;
   border-bottom: 1px solid;
 }
 
 .navbar-toggler {
-background-color: #fff;
+  background-color: #fff;
 }
 
 /* The switch - the box around the slider */
@@ -89,22 +91,79 @@ input:checked + .slider::before {
   border-radius: 50%;
 }
 
- /* Add custom CSS to prevent content push down in mobile view */
-  @media (max-width: 992px) {
-    .navbar {
-      position: fixed;
-      top: 0;
-      right: 0;
-      left: 0;
-      z-index: 1030;
-    }
+.form-container {
+  background-color: inherit;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  padding: 20px;
+  max-width: 400px;
+}
 
-    .navbar-collapse {
-      min-height: 50vh;
-      background-color: inherit;
-    }
-    /* Add padding to body to account for navbar height */
-    body {
-      padding-top: 70px;
-    }
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+  padding-top: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #fff;
+}
+
+input[type='text'],
+input[type='password'],
+input[type='email'],
+input[type='submit'] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+input[type='submit'] {
+  background-color: #4caf50;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+input[type='submit']:hover {
+  box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+  transform: scale(1.1);
+}
+
+input[type='checkbox'] + label {
+  display: inline-block;
+}
+
+@media (min-width: 400px) {
+  .form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 400px;
   }
+}
+
+/* Add custom CSS to prevent content push down in mobile view */
+@media (max-width: 992px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+
+  .navbar-collapse {
+    min-height: 50vh;
+    background-color: inherit;
+  }
+}
