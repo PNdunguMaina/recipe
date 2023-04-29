@@ -1,9 +1,15 @@
-<h1>Public Recipes</h1>
-<% @recipes.each do |recipe| %>
-    <hr />
-    <p><%= recipe.name %></p>
-    <p>By: <span><%= recipe.author.name.split(" ").second %></span></p>
-    <p>Total food items: <span><%= recipe.foods.count %></span></p>
-     <p>Total price: <span><%= number_to_currency(recipe.calculate_total_price(recipe)) %></span></p>
-    <hr />
-<% end %>
+<div class="container">
+  <h1 class="text-white">Public Recipes</h1>
+  <% @recipes.each do |recipe| %>
+    <hr class="my-4">
+    <div class="card mb-4">
+      <div class="card-body">
+        <h5 class="card-title"><%= recipe.name %></h5>
+        <p class="card-text">By: <span><%= recipe.author.name.split(" ").second %></span></p>
+        <p class="card-text">Total food items: <span><%= recipe.foods.count %></span></p>
+        <p class="card-text">Total price: <span><%= number_to_currency(recipe.calculate_total_price(recipe)) %></span></p>
+        <%= link_to "View Recipe", recip_path(recipe)%>
+      </div>
+    </div>
+  <% end %>
+</div>

@@ -147,6 +147,29 @@ thead {
   color: #FFA500;
 }
 
+.card {
+  background-color: inherit;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
+
+.card-title {
+  color: #FFA500;
+}
+
+.card-text {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #f5f5dc;
+}
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  color: #f5f5dc;
+  margin-bottom: 16px;
+}
+
+
 @media (min-width: 400px) {
   .form-container {
     position: absolute;

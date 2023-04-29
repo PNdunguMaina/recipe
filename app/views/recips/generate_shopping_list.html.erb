@@ -1,23 +1,26 @@
-<h1>Shopping List</h1>
-<p>Amount of food items to buy: <span><%= @total_foods%></span></p>
-<p>Total value of food needed: <span>$<%= @total_value%></span></p>
+<div class="container">
+  <h2>Shopping List</h2>
+  <p>Amount of food items to buy: <span class="badge bg-secondary"><%= @total_foods %></span></p>
+  <p>Total value of food needed: <span class="badge bg-secondary">$<%= @total_value %></span></p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Food Name</th>
-      <th>Quantity</th>
-      <th>Price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @shopping_list.each do |food_name, quantity| %>
+  <table class="table table-striped">
+    <thead>
       <tr>
-        <td><%= food_name %></td>
-        <td><%= quantity %><span> <%= Food.find_by(name: food_name).measurement_unit%></span></td>
-        <td>$ <%= "#{quantity * Food.find_by(name: food_name).price}" %></td>
+        <th>Food Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
+    </thead>
+    <tbody class="text-white">
+      <% @shopping_list.each do |food_name, quantity| %>
+        <tr>
+          <td><%= food_name %></td>
+          <td><%= quantity %><span> <%= Food.find_by(name: food_name).measurement_unit%></span></td>
+          <td>$ <%= "#{quantity * Food.find_by(name: food_name).price}" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+
 
