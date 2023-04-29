@@ -1,6 +1,6 @@
-<%= form_with(model: food) do |form| %>
+<%= form_with(model: food, class: "form-horizontal") do |form| %>
   <% if food.errors.any? %>
-    <div style="color: red">
+    <div class="alert alert-danger">
       <h2><%= pluralize(food.errors.count, "error") %> prohibited this food from being saved:</h2>
 
       <ul>
@@ -11,24 +11,34 @@
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :Name %>
-    <%= form.text_area :name %>
+  <div class="form-group">
+    <%= form.label :name, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= form.text_area :name, class: "form-control" %>
+    </div>
   </div>
-  <div>
-    <%= form.label :Measurement_unit %>
-    <%= form.text_area :measurement_unit %>
+  <div class="form-group">
+    <%= form.label :measurement_unit, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= form.text_area :measurement_unit, class: "form-control" %>
+    </div>
   </div>
-  <div>
-    <%= form.label :Price %>
-    <%= form.number_field :price %>
+  <div class="form-group">
+    <%= form.label :price, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= form.number_field :price, class: "form-control" %>
+    </div>
   </div>
-  <div>
-    <%= form.label :Quantity %>
-    <%= form.text_area :quantity %>
+  <div class="form-group">
+    <%= form.label :quantity, class: "col-sm-2 control-label" %>
+    <div class="col-sm-10">
+      <%= form.text_area :quantity, class: "form-control" %>
+    </div>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <%= form.submit "Save", class: "btn btn-primary" %>
+    </div>
   </div>
 <% end %>

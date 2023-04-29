@@ -1,10 +1,30 @@
 <p style="color: green"><%= notice %></p>
+<div class="px-3">
+<h2>Foods</h2>
+<div class="d-flex justify-content-end">
+<%= link_to "Add", new_food_path, class: "btn btn-primary mb-3" %>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Measurement Unit</th>
+      <th>Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody class="text-white">
+    <% @foods.each do |food| %>
+      <tr>
+        <td><%= food.name %></td>
+        <td><%= food.measurement_unit %></td>
+        <td><%= food.price %></td>
+        <td>
+          <%= link_to "Delete", food, data: { turbo_method: :delete }, class: "btn btn-danger btn-sm", method: :delete, remote: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
 
-<h1>Foods</h1>
-<%= link_to "Add", new_food_path %>
-  <% @foods.each do |food| %>
-    <hr />
-    <%= render partial: "shared/food", locals: { name: food.name, measurement_unit: food.measurement_unit, quantity: nil, price: food.price, value: nil } %>
-    <span>Actions: </span><%= link_to "Delete", food, data: { turbo_method: :delete } %>
-    <hr />
-  <% end %>
