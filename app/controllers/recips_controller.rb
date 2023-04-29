@@ -1,5 +1,6 @@
 class RecipsController < ApplicationController
   before_action :set_recip, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: [:public_recipe]
 
   # GET /recips or /recips.json
   def index

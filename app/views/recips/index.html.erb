@@ -1,15 +1,18 @@
 <p style="color: green"><%= notice %></p>
+<div class="px-3">
+  <h2>Recipes</h2>
 
-<h1>Recipes</h1>
-
-<div id="recips">
-  <% @recips.each_with_index do |recip, index| %>
-  <hr />
-  <%= link_to recip, class:"text-decoration-none" do%>
-    <p>Recipe <%= index + 1%></p>
-    <p><%=recip.description%></p>
+  <div id="recips">
+    <% @recips.each_with_index do |recip, index| %>
+      <div class="card mb-3">
+        <div class="card-body">
+          <%= link_to recip, class: "text-decoration-none text-dark" do %>
+            <h5 class="card-title">Recipe <%= index + 1 %></h5>
+            <p class="card-text"><%= recip.description %></p>
+          <% end %>
+          <%= link_to "Remove", recip, data: { turbo_method: :delete }, class: "btn btn-danger mt-3" %>
+        </div>
+      </div>
     <% end %>
-    <%= link_to "Remove", recip, data: { turbo_method: :delete } %>
-    <hr />
-  <% end %>
+  </div>
 </div>

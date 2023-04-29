@@ -1,28 +1,51 @@
-<p style="color: green"><%= notice %></p>
-<%= link_to "Back to recips", recips_path %>
-<p>Recipe <%= @recip.id %></p>
-<p><strong>Preparation Time:</strong> <%= @recip.preparation_time%>
-<p><strong>Cooking Time:</strong> <%= @recip.cooking_time%>
+<p class="text-success"><%= notice %></p>
+<h2>Recipe <%= @recip.id %></h2>
+<p><strong class="text-white">Preparation Time:</strong> <%= @recip.preparation_time %></p>
+<p><strong class="text-white">Cooking Time:</strong> <%= @recip.cooking_time %></p>
 <p>Steps go here...</p>
-<%if @recip.public == false%>
+
+<% if @recip.public == false %>
   <label>Public</label>
   <label class="switch">
-  <input type="checkbox" disabled>
-  <span class="slider round"></span>
-</label>
-<%else%>
+    <input type="checkbox" disabled>
+    <span class="slider round"></span>
+  </label>
+<% else %>
   <label>Public</label>
   <label class="switch">
-  <input type="checkbox" checked disabled>
-  <span class="slider round"></span>
-</label>
-<%end%>
-<%= link_to "Generate Shopping List", shopping_list_path, class:"btn btn-success" %>
-<%= link_to "Add ingredient", new_recip_recipe_food_path(@recip), class:"btn btn-primary" %>
-<div>
-<% @foods.each do |food| %>
-    <hr />
-    <%= render partial: "shared/food", locals: { name: food.name, measurement_unit: nil, quantity: food.quantity, price: nil, value: food.quantity.to_i * food.price } %>
-    <%= button_to "Delete", recip_recipe_food_path(@recip.id, food.id), method: :delete, class: "btn btn-danger" %>
-  <% end %>
+    <input type="checkbox" checked disabled>
+    <span class="slider round"></span>
+  </label>
+<% end %>
+
+<%= link_to "Generate Shopping List", shopping_list_path, class: "btn btn-success mt-3 mr-3" %>
+<%= link_to "Add Ingredient", new_recip_recipe_food_path(@recip), class: "btn btn-primary mt-3" %>
+
+<div class="table-responsive py-4">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Quantity</th>
+        <th>Price</th>
+        <th>Value</th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="text-white">
+      <% @foods.each do |food| %>
+        <tr>
+          <td><%= food.name %></td>
+          <td><%= food.quantity %></td>
+          <td><%= food.price %></td>
+          <td><%= food.quantity.to_i * food.price %></td>
+          <td>
+            <%= button_to "Delete", recip_recipe_food_path(@recip.id, food.id), method: :delete, class: "btn btn-danger btn-sm" %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
 </div>
+<%= link_to "Back to Recipes", recips_path, class: "btn btn-secondary mb-3" %>
+

@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   get '/public_recipes', to: 'recips#public_recipe'
   get '/shopping_list', to: 'recips#generate_shopping_list'
   devise_for :users
-  root "home#index"
+  root "recips#public_recipe"
 end
