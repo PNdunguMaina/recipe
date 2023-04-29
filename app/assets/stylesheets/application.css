@@ -169,6 +169,10 @@ p {
   margin-bottom: 16px;
 }
 
+.dropdown-item:hover {
+  background-color: inherit;
+}
+
 
 @media (min-width: 400px) {
   .form-container {
