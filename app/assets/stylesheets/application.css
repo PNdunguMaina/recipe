@@ -172,6 +172,13 @@ p {
   background-color: inherit;
 }
 
+.add-recipe-btn {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 @media (min-width: 400px) {
   .form-container {
     position: absolute;

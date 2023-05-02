@@ -1,8 +1,11 @@
 <p style="color: green"><%= notice %></p>
 <div class="px-3">
   <h2>Recipes</h2>
-
+  <div class="d-flex justify-content-end">
+    <%= link_to "Create Recipe", new_recip_path, class: "btn btn-primary mb-3 add-recipe-btn" %>
+  </div>
   <div id="recips">
+  <% if @recips.length > 0 %>
     <% @recips.each_with_index do |recip, index| %>
       <div class="card mb-3">
         <div class="card-body">
@@ -14,5 +17,8 @@
         </div>
       </div>
     <% end %>
+    <% else %>
+     <h1 class="text-center card py-2 text-info">No recipes created yet!</h1>
+     <% end %>
   </div>
 </div>
