@@ -20,7 +20,7 @@
       <tr>
         <td><%= food.name %></td>
         <td><%= food.measurement_unit %></td>
-        <td><%= food.price %></td>
+        <td>$<%= food.price %></td>
         <td>
           <%= link_to "Delete", food, data: { turbo_method: :delete }, class: "btn btn-danger btn-sm", method: :delete, remote: true %>
         </td>

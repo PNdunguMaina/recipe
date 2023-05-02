@@ -20,7 +20,7 @@ class RecipsController < ApplicationController
 
   # POST /recips or /recips.json
   def create
-    @recip = Recip.new(recipe_params)
+    @recip = Recip.new(recip_params)
     @recip.author = current_user
 
     respond_to do |format|
@@ -89,7 +89,7 @@ class RecipsController < ApplicationController
   end
 
   # Only allow a list of trusted parameters through.
-  # def recip_params
-  #   params.require(:recip).permit(:name, :preparation_time, :cooking_time, :description, :public)
-  # end
+  def recip_params
+    params.require(:recip).permit(:name, :preparation_time, :cooking_time, :description, :public)
+  end
 end
